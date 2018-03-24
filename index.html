@@ -70,47 +70,115 @@
       </div>
     </div>
     <div class="container">
-      <div class="commentary">
-        <h2>Cashier</h2>
-        <p><br>While I worked on a variety of projects at Flowhub, I'd like to first start with one of the largest: redesigning the Cashier section of the POS. The cashier portion of Flowhub’s point of sale application conducts thousands of transactions a day in dispensaries across the U.S. The initial design of the cashier page was exactly the same as the inventory section, with a complete table of items that budtenders pick from and add to a customer’s shopping cart. This design was a quite costly on the loading side, given that not all of our customers have blazing fast internet, and that it would take a while to load-in all of the items before a budtender could actually start using the cashier. This problem was solved by removing the table entirely and installing a simple search box at the top of the screen, but while loading times were significantly reduced, budtenders would have to enter the exact product they were looking for in order to pull-it-up and add it to a customer’s cart. Having to search for the exact product made for a pretty painful UX when a budtender screws up a specific SKU or misses a letter.</p>
+      <div class="demo" style="margin-top: 50px;">
+        <img src="Images/CashierFinal.gif">
       </div>
-      <img src="https://cloud.githubusercontent.com/assets/14104075/21959879/58fad7ca-da92-11e6-8c9c-e3e753a32b1e.png">
-      <div class="commentary">
-        <p>There’s also the issue of catering to both types of customers that shop at a dispensary: the regular, and the tourist. Regular customers know exactly what they are looking for when they walk through the doors of a dispensary, making the entire purchasing process pretty quick and straightforward. Tourist customers are often people who have little to no experience with cannabis products and have tons of questions regarding their potential cannabis purchase. The simple search box design of the cashier was great for helping the regular customers, but didn’t offer any prompts or up-sell opportunities for when it came to the probing tourist customer. I was tasked with totally revamping the cashier experience to make it easy for a budtender to sell to both groups. <br><br>
-        I began by assessing the limitations of the current design and outlining the goals of my redesign. Usability across tablet and desktop, emphasis on up-sell opportunities, transaction speed, and distinctness of products became the main drivers for this redesign, so with those in mind I started developing mockups.
-        </p>
+    </div>
+    <div class="container">
+      <div class="row" style="padding-top: 100px; padding-bottom: 100px;">
+        <div class="col-md-6">
+            <h5>Point of sale cashier</h5>
+            <h6>Thousands of transactions go through Flowhub’s POS, but slow internet for the majority of customers made searching for every item a huge pain. Flowhub needed a faster checkout that was as robust as a table view but loaded quicker than search, all while working on laptops and tablets.</h6>
+        </div>
+        <div class="col-md-6">
+          <div class="read-more" onclick="this.classList.add('expanded')">
+            <div class="content">
+              <p>
+                <br>The initial design of the cashier page was exactly the same as the inventory section, with a complete table of items that budtenders pick from and add to a customer’s shopping cart. This design was a quite costly on the loading side, given that not all of our customers have blazing fast internet, and that it would take a while to load-in all of the items before a budtender could actually start using the cashier. This problem was solved by removing the table entirely and installing a simple search box at the top of the screen, but while loading times were significantly reduced, budtenders would have to enter the exact product they were looking for in order to pull-it-up and add it to a customer’s cart. Having to search for the exact product made for a pretty painful UX when a budtender screws up a specific SKU or misses a letter.
+              </p>
+            </div>
+            <span class="trigger">+ Read more</span>
+          </div>
+        </div>
       </div>
-      <img src="https://cloud.githubusercontent.com/assets/14104075/21959881/58fc3728-da92-11e6-99d4-c009434b8a48.png">
-      <div class="commentary">
-        <p>Having conducted a bit of research into other digital point of sale systems, it was apparent that cards were the preferred design pattern for the main screen, and it’s pretty obvious why: they’re highly visual and offer a generous amount of click or tap space. I tried a couple of methods of presenting the products with various labels and icons, but a budtender needs to know quite a lot more than a regular POS card may show in order to make even a mildly appropriate recommendation. Note how many characteristics a cannabis product can have as points of up-selling to a customer: what type of product it is, how much it costs, what units of weight it is sold by, whether it’s available for medical or recreational sale, what brand it is, what type of blend it is, how much CBD and THC is in it, etc. One of the challenges of this cashier was packing as much of this information into cards while maintaining legibility and clickability. I prototyped touch and hover-states for the cards in HTML and CSS, but the developers expressed concerns about the variety of browsers and devices they’d have to develop this for in a short time period, as well as the usability when it came to touching where information would be displayed on the cards, thereby obstructing the user’s view on touch devices. You can see the evolution of packing information into cards with some of my early trials below: </p>
-      </div>
-      <img src="https://cloud.githubusercontent.com/assets/14104075/21959878/58fa1d08-da92-11e6-8a70-7f05b8637e83.png">
-      <div class="commentary">
-        <p>Below is a sample of the final Cashier design with a demo of some of the animations used to enhance the user experience. </p>
-      </div>
-      <img src="https://cloud.githubusercontent.com/assets/14104075/22453767/7ae19da2-e73e-11e6-9faf-5c692bcb3467.gif">
-     <div class="commentary">
-        <h2>Micro Icons and Accessibility</h2>
-        <p><br>Another major project involved designing an entire set of micro icons for a variety of applications throughout the POS. The icons we were using for products and pages could only fit in areas so small, and they weren’t particularly distinct as you scroll through them quickly, so we decided to introduce a new micro-icon system. These icons were to be legible at small sizes, and were to be paired with bright colored bases to develop a heuristic of familiarity for the budtenders to quickly identify what they are looking for. Along those lines as well, I tried to make the icons and their base colors distinct enough to be identified by someone who was color-blind or someone with poor eyesight. One of the crazy things I learned while working on these icons was how all of the classical rules of maintaining line-width in iconography go right out of the window once you’re working at micro scale. Most of the time you can keep the same line-width, but often times I’d be pushing fractions of a pixel to make sure clearance between two icon segments was wide enough. Selecting base colors for the icons was an interesting task as well, given that there was such a wide variety of activities that could show up in a feed. For the non-heuristic color selections (heuristic like green for add, red for delete) I tried to match colors that had similar hues like green, turquoise, and blue with distinct icons of events that would likely occur in different time intervals, so they wouldn’t appear next to each other very often.</p>
-      </div>
-      <img src="https://cloud.githubusercontent.com/assets/14104075/21959880/58fb5a60-da92-11e6-9990-5e0aa64ad8ea.png">
-      <div class="commentary">
-        <h2>Detail Views</h2>
-        <p><br>On the right side of every point of sale screen there is a column controlled by two tabs. This column displays details about selected items in the center-view, enabling users to do a deep-dive into what happens in the dispensary. The design at the time was a condensed table with the label on the left side and the content on the right. From a pure functionality standpoint, this covered about 80% of the cases of information that it would present, but the other 20% rendered it almost unusable. Sometimes labels would extend far into the right side of the table and have to end in an ellipses (…) before the user new what it was describing, and vice-versa for the content on the opposite side of the table. Given that these detailed views were supposed to denote compliance information, they were definitely due for a UI/UX upgrade. </p>
-      </div>
-      <img src="https://cloud.githubusercontent.com/assets/14104075/21959870/58de29c2-da92-11e6-99ce-5503148ab739.png">
-      <div class="commentary">
-        <p>My design started with maximizing the space given in the column itself. I pushed the label margins up to 12px of the main container, and consolidated the appropriate characteristics into subcategories to use across all of the detail columns for the products and pages. At the top of the column is the subject of interest, denoted with it’s product icon, title, and meta detail such as it’s availability. Below the subject is it’s characteristics and pricing information such as the weight unit, quantity stats, and it’s pricing profile breakdown. Some products have a CBD and THC content, expiration date, and other unique pieces of information, so I adjusted the sections of the column for each product category to fit all that was needed. The next section hosts stats about the product as a whole such as when it arrived, it’s SKU, invoice, and other company-logistic and inventory information. The final section represents the compliance components of the product, where source and store licensing could be found if a dispensary were to be audited. It’s worth mentioning that the ease-of-use of Flowhub as a point of sale system for the cannabis industry greatly reduces the stress of being audited by the federal government at any random time on any given day. This continues to be a major selling point for all of Flowhub’s customers that use the POS application.</p>
-      </div>
-      <img src="https://cloud.githubusercontent.com/assets/14104075/21959873/58e2d1de-da92-11e6-84e3-fdcd62fe172c.png">
+      <img src="Images/OriginalDesign.png">
+    </div>
+    <div class="container">
+      <div class="row" style="padding-top: 100px; padding-bottom: 100px;">
+        <div class="col-md-6">
+            <h5>Two customers. One checkout.</h5>
+            <h6>Two types of customers visit a dispensary: The regular, and the tourist. One knows exactly what they want, and the other wants to explore. Budtenders needed prompts and specials to guide the sale to tourists.</h6>
+        </div>
+        <div class="col-md-6">
+          <div class="read-more" onclick="this.classList.add('expanded')">
+            <div class="content">
+              <p>
+                <br>Regular customers know exactly what they are looking for when they walk through the doors of a dispensary, making the entire purchasing process pretty quick and straightforward. Tourist customers are often people who have little to no experience with cannabis products and have tons of questions regarding their potential cannabis purchase. The simple search box design of the cashier was great for helping the regular customers, but didn’t offer any prompts or up-sell opportunities for when it came to the probing tourist customer. I was tasked with totally revamping the cashier experience to make it easy for a budtender to sell to both groups.<br><br>
 
-      <div class="commentary">
-        <h2>Labels</h2>
-        <p><br>Given how new the (legal) cannabis industry is, things are rapidly changing on a day-to-day basis. The U.S. and state governments are working as quickly as they can to foster cannabis into society in the most legal and compliant way possible, but things are happening at such a high velocity that businesses have had to figure out how to adhere to basic guidelines on their own terms. One example is that of compliance labels. Our POS can communicate with label-printing machines to translate digital items in our database to printed tags that store owners can use to keep track of their product. The government defined a base set of guidelines for what these labels must have, but had yet to make a concrete design that all cannabis products must have. While it may be the wild west in the world of cannabis design, I got a chance to make my own interpretations of some of these compliance labels. State governments have a tendency to adopt what has been tried and tested when it comes to cannabis compliance, so hopefully these labels will appear on enough of our customers’ products to be adopted by the industry. At the time of writing this case study, Oregon has since made guidelines specifying font requirements for their labels, but here are some label trials I designed while I was at Flowhub. The idea was to maximize the space that labels could be printed on while incorporating the Flowhub logo as an advertising opportunity.</p>
+                I began by assessing the limitations of the current design and outlining the goals of my redesign. Usability across tablet and desktop, emphasis on up-sell opportunities, transaction speed, and distinctness of products became the main drivers for this redesign, so with those in mind I started developing mockups.
+              </p>
+            </div>
+            <span class="trigger">+ Read more</span>
+          </div>
+        </div>
       </div>
-      <img src="https://cloud.githubusercontent.com/assets/14104075/21959884/5909792e-da92-11e6-98cd-6c359b5a36f6.png">
+      <img src="Images/CardIterations.png">
+    </div>
+    <div class="container">
+      <div class="row" style="padding-top: 100px; padding-bottom: 100px;">
+        <div class="col-md-6">
+            <h5>Inventory cards as the solution</h5>
+            <h6>Highly visual cards offer a generous amount of click or tap space for both desktop and mobile, and translated primary product information for tourist customers.</h6>
+        </div>
+        <div class="col-md-6">
+          <div class="read-more" onclick="this.classList.add('expanded')">
+            <div class="content">
+              <p>
+                <br>Having conducted research into other digital point of sale systems, it was apparent that cards were the preferred design pattern for the main screen. I tried a couple of methods of presenting the products with various labels and icons, but a budtender needs to know quite a lot more than a regular POS card may show in order to make even a mildly appropriate recommendation. Note how many characteristics a cannabis product can have as points of up-selling to a customer: what type of product it is, how much it costs, what units of weight it is sold by, whether it’s available for medical or recreational sale, what brand it is, what type of blend it is, how much CBD and THC is in it, etc. One of the challenges of this cashier was packing as much of this information into cards while maintaining legibility and clickability. I prototyped touch and hover-states for the cards in HTML and CSS, but the developers expressed concerns about the variety of browsers and devices they’d have to develop this for in a short time period, as well as the usability when it came to touching where information would be displayed on the cards, thereby obstructing the user’s view on touch devices. You can see the evolution of packing information into cards with some of my early component trials below:
+              </p>
+            </div>
+            <span class="trigger">+ Read more</span>
+          </div>
+        </div>
+      </div>
+      <img src="Images/CardIterations2.png">
+      <div class="demo" style="margin-top: 50px;">
+        <img src="Images/CashierFinal.gif">
+      </div>
+    </div>
+    <div class="container">
+      <div class="row" style="padding-top: 100px; padding-bottom: 100px;">
+        <div class="col-md-6">
+            <h5>Micro icons and accessibility</h5>
+            <h6>Displaying activity to an employee or store manager as they scroll through a fast feed of transactions required clear, distinct, and intuitive indicators. These were designed to accommodate poor vision and color blindness.</h6>
+        </div>
+        <div class="col-md-6">
+          <div class="read-more" onclick="this.classList.add('expanded')">
+            <div class="content">
+              <p>
+                <br>The icons we were using for products and pages could only fit in areas so small, and they weren’t particularly distinct as you scroll through them quickly, as they were all the same line width, size, and color so we decided to introduce a new micro-icon system. These icons were to be legible at small sizes, and were to be paired with bright colored bases to develop a heuristic of familiarity for the budtenders to quickly identify what they are looking for. Along those lines as well, I tried to make the icons and their base colors distinct enough to be identified by someone who was color-blind or someone with poor eyesight. One of the crazy things I learned while working on these icons was how all of the classical rules of maintaining line-width in iconography go right out of the window once you’re working at micro scale. Most of the time you can keep the same line-width, but often times I’d be pushing fractions of a pixel to make sure clearance between two icon segments was wide enough. Selecting base colors for the icons was an interesting task as well, given that there was such a wide variety of activities that could show up in a feed. For the non-heuristic color selections (heuristic like green for add, red for delete) I tried to match colors that had similar hues like green, turquoise, and blue with distinct icons of events that would likely occur in different time intervals, so they wouldn’t appear next to each other very often.
+              </p>
+            </div>
+            <span class="trigger">+ Read more</span>
+          </div>
+        </div>
+      </div>
+      <img src="Images/IconsDemo.png">
+    </div>
+    <div class="container">
+      <div class="row" style="padding-top: 100px; padding-bottom: 100px;">
+        <div class="col-md-6">
+            <h5>When tables fail</h5>
+            <h6>Homogenous typography, low contrast, and a lack of hierarchical organization made browsing product details arduous and time consuming. Three information categories, stark typographic contrast, and space maximization standardized detail views across every product vertical.</h6>
+        </div>
+        <div class="col-md-6">
+          <div class="read-more" onclick="this.classList.add('expanded')">
+            <div class="content">
+              <p>
+                <br>On the right side of every point of sale screen there is a column controlled by two tabs. This column displays details about selected items in the center-view, enabling users to do a deep-dive into what happens in the dispensary. The design at the time was a condensed table with the label on the left side and the content on the right. From a pure functionality standpoint, this covered about 80% of the cases of information that it would present, but the other 20% rendered it almost unusable. Sometimes labels would extend far into the right side of the table and have to end in an ellipses (…) before the user new what it was describing, and vice-versa for the content on the opposite side of the table. Given that these detailed views were supposed to denote compliance information, they were definitely due for a UI/UX upgrade.<br><br>
+                My design started with maximizing the space given in the column itself. I pushed the label margins up to 12px of the main container, and consolidated the appropriate characteristics into subcategories to use across all of the detail columns for the products and pages. It’s worth mentioning that the ease-of-use of Flowhub as a point of sale system for the cannabis industry greatly reduces the stress of being audited by the federal government at any random time on any given day. The ease of use of this detailed view during an audit continues to be a major selling point for all of Flowhub’s customers that use the POS application.
+              </p>
+            </div>
+            <span class="trigger">+ Read more</span>
+          </div>
+        </div>
+      </div>
+      <img src="Images/DetailView1.png">
+      <img src="Images/DetailView2.png">
+    </div>
+    <div class="container">
       <div class="commentary">
-        <h2>What I Learned at Flowhub</h2>
+        <h5>What I Learned at Flowhub</h5>
         <p>
           <br>Compliance is really really tedious. And designing a solution for compliance can get very overwhelming at times. That, coupled with the demands of customers made for a consistently high pace of work. I learned how to <strong>strip-down and condense my design process</strong> into shorter-iteration times to break-up large projects into more manageable components. <br><br>
           With every project I was constantly bouncing ideas off-of Jon, the Creative Director. Given the volume of things he was dealing with, I learned <strong>how to present my work, ideas, and problems quickly and clearly</strong> so he would have everything he needed to provide effective and direct feedback. <br><br>
@@ -120,7 +188,7 @@
         </p>
       </div>
       <div class="commentary">
-        <h2>Conclusion</h2>
+        <h5>Conclusion</h5>
         <p><br>The work I’ve shared above is just a selection of some of the projects I had the chance to work on while at Flowhub. As you can tell, I bounced-around to a variety of digital and physical mediums, but was always given the chance to influence the design direction of the company. From the great office migration, to weekly company “Rallies”, to defending a “Design Fort”, to hacky-sack breaks, to Brazilian steakhouse feasts, to absurd emojis in the Slack channel, to arguably working in the strangest industry in the world, my time at Flowhub was everything I could want out of an early-stage startup experience.</p>
       </div>
     </div>
